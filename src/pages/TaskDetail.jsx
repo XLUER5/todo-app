@@ -3,7 +3,6 @@ import { useParams, useNavigate } from "react-router-dom";
 import {
   Card,
   Typography,
-  Tag,
   Button,
   Space,
   Descriptions,
@@ -12,20 +11,14 @@ import {
   Popconfirm,
   Row,
   Col,
-  Avatar,
-  Progress,
   Badge,
-  Tooltip,
 } from "antd";
 import {
-  EditOutlined,
   DeleteOutlined,
   ArrowLeftOutlined,
   CheckCircleOutlined,
   ClockCircleOutlined,
-  CalendarOutlined,
   FileTextOutlined,
-  FundProjectionScreenOutlined,
 } from "@ant-design/icons";
 import moment from "moment";
 import useTasks from "../hooks/useTasks";
