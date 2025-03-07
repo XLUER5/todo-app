@@ -37,12 +37,16 @@ export const AuthProvider = ({ children }) => {
       const response = await api.post("/login", { email });
       const { data } = response.data;
 
-      localStorage.setItem("token", data.token);
-      localStorage.setItem("email", email);
-      api.defaults.headers.common["Authorization"] = `Bearer ${token}`;
+      const newToken = data.token;
 
-      setToken(token);
+      localStorage.setItem("token", newToken);
+      localStorage.setItem("email", email);
+
+      api.defaults.headers.common["Authorization"] = `Bearer ${newToken}`;
+
+      setToken(newToken);
       setEmail(email);
+
       message.success("¡Inicio de sesión exitoso!");
       return true;
     } catch (error) {

@@ -8,14 +8,14 @@ import {
   AppstoreOutlined,
   SettingOutlined,
 } from "@ant-design/icons";
-import { Link, Outlet, useNavigate, useLocation } from "react-router-dom";
+import { Outlet, useNavigate, useLocation } from "react-router-dom";
 import useAuth from "../hooks/useAuth";
 
 const { Header, Content } = Layout;
 const { Title } = Typography;
 
 const AppLayout = () => {
-  const { user, logout } = useAuth();
+  const { email, logout } = useAuth();
   const navigate = useNavigate();
   const location = useLocation();
   const { token } = theme.useToken();
@@ -82,7 +82,7 @@ const AppLayout = () => {
                   icon={<UserOutlined />}
                   style={{ backgroundColor: token.colorPrimary }}
                 />
-                <span>{user?.username || "Usuario"}</span>
+                <span>{email || "Usuario"}</span>
                 <DownOutlined />
               </Space>
             </Dropdown>

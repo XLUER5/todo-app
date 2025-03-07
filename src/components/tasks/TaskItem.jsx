@@ -2,15 +2,12 @@ import {
   List,
   Typography,
   Tag,
-  Space,
   Button,
   Popconfirm,
   Checkbox,
 } from "antd";
 import {
-  EditOutlined,
   DeleteOutlined,
-  EyeOutlined,
   CheckCircleOutlined,
   ClockCircleOutlined,
 } from "@ant-design/icons";
@@ -22,11 +19,6 @@ const { Text } = Typography;
 const TaskItem = ({ task }) => {
   const { updateTask, deleteTask } = useTasks();
   const navigate = useNavigate();
-
-  const handleEditTask = (e) => {
-    e.stopPropagation();
-    navigate(`/tasks/edit/${task.id}`);
-  };
 
   const handleTaskDetail = (e) => {
     e.stopPropagation();

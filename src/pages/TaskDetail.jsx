@@ -55,10 +55,6 @@ const TaskDetail = () => {
     }
   };
 
-  const handleEdit = () => {
-    navigate(`/task/edit/${id}`);
-  };
-
   if (loading) {
     return (
       <div
