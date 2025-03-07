@@ -76,6 +76,9 @@
   .task-form {
     max-width: 100%;
   }
+  h4.ant-typography.css-dev-only-do-not-override-240cud {
+    font-size: 10px !important;
+  }
 }
 
 /* LoginForm.css */
